@@ -1,39 +1,46 @@
 ﻿
-Console.WriteLine("Enter X:");
-var X = Console.ReadLine();
-var enteredX = int.TryParse(X, out int NewX);
 
-Console.WriteLine("Enter Y:");
-var Y = Console.ReadLine();
-var enteredY = int.TryParse(Y, out int NewY);
+//Method TrySumIfOdd that accepts 2 parameters and returns true if sum of numbers between inputs is odd, otherwise false, sum return as out parameter
 
-if (enteredX && enteredY)
+
+bool TrySumIfOdd(int number1, int number2, out int sum)
 {
-    int sum = 0;
-    
-    if (NewX == NewY)
+    sum = number1 + number2;
+    if (sum % 2 == 0)
     {
-        sum = NewX;
-        Console.WriteLine(sum);
-    }
-    else if (NewX > NewY)
-    {
-        for (int i = NewY; i <= NewX; i++)
-        {
-            sum = sum + i;
-        }
-        Console.WriteLine(sum);
+        return false;
     }
     else
     {
-        for (int i = NewX; i <= NewY; i++)
-        {
-            sum = sum + i;
-        }
-        Console.WriteLine("HERE YOUR RESULT:" + sum);
+        return true;
     }
 }
-else
+
+
+//Method that will return max value among all the parameters
+//… min value …
+//Overload first two methods with 3 and 4 parameters
+class TestClass
+
 {
-    Console.WriteLine("NOT SUCCESS");
+    void MaxValue(int param1, int param2)
+    {
+        Console.WriteLine(Math.Max(param1, param2));
+    }
+
+    void MinValue(int param1, int param2)
+    {
+        Console.WriteLine(Math.Min(param1, param2));
+    }
+
+    void MaxValue(int param1, int param2, int param3)
+    {
+        Console.WriteLine(Math.Max(param1, Math.Max(param2, param3)));
+    }
+
+    void MinValue(int param1, int param2, int param3, string param4)
+    {
+        Console.WriteLine(param4 + " " + Convert.ToString(Math.Min(param1, Math.Min(param2, param3))));
+    }
+
 }
