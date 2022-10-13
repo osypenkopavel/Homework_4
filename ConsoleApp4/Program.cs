@@ -1,7 +1,4 @@
-﻿
-
-//Method TrySumIfOdd that accepts 2 parameters and returns true if sum of numbers between inputs is odd, otherwise false, sum return as out parameter
-
+﻿//Method TrySumIfOdd that accepts 2 parameters and returns true if sum of numbers between inputs is odd, otherwise false, sum return as out parameter
 
 bool TrySumIfOdd(int number1, int number2, out int sum)
 {
@@ -15,7 +12,6 @@ bool TrySumIfOdd(int number1, int number2, out int sum)
         return true;
     }
 }
-
 
 //Method that will return max value among all the parameters
 //… min value …
@@ -42,5 +38,4 @@ class TestClass
     {
         Console.WriteLine(param4 + " " + Convert.ToString(Math.Min(param1, Math.Min(param2, param3))));
     }
-
 }
